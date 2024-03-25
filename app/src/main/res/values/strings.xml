@@ -1,0 +1,122 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="next">Next</string>
+    <string name="Settings">Settings</string>
+    <string name="Favourites">Favourites</string>
+    <string name="Home">Home</string>
+    <string name="Alerts">Alerts</string>
+
+
+    <string name="Weather_Details">Weather details</string>
+    <string name="Life_Style_Tips">LifeStyle tips</string>
+    <string name="Feels_Like">Feels like</string>
+    <string name="NNW_wind">NNW wind</string>
+    <string name="Humidity">Humidity</string>
+    <string name="Uv">UV</string>
+    <string name="Visibility">Visibility</string>
+    <string name="Air_Pressure">Air Pressure</string>
+
+
+    <string name="hourly">%1$d %2$s</string>
+    <string name="max.min.unit">%1$d / %2$d %3$s</string>
+    <string name="previous">Previous</string>
+    <string name="hpa"> hpa</string>
+    <string name="m_s">m/s</string>
+    <string name="km_h">Km/hr</string>
+    <string name="m_h">mile/hr</string>
+
+    <string-array name="WindUnit">
+        <item name = ""></item>
+        <item name="metric">metric</item>
+    <item name="standard">standard</item>
+    <item name="imperial">imperial</item>
+    </string-array>
+
+    <string name="temp_deg">%1$d %2$s</string>
+    <string name="pressure_deg">%1$.2f %2$s</string>
+    <string name="wind_deg">%1$d %2$s</string>
+    <string name="humidity_deg">%1$d %2$s</string>
+    <string name="cloud_deg">%1$d %2$s</string>
+    <string name="uv_deg">%1$d %2$s</string>
+    <string name="visibility_deg">%1$d %2$s</string>
+
+
+    <string name="Suitable">Sutible \n for indoor</string>
+    <string name="VerySuitable">Very Sutible \n for car wash</string>
+    <string name="Moisturisers">User more \n Moisturisers</string>
+    <string name="Modrate">Moderate UV \n index</string>
+    <string name="Trip">Very Suitable \n for a trip</string>
+    <string name="Pollen">Low Pollen \n count</string>
+    <string name="Traffic">Good traffic \n condition</string>
+    <string name="Mosquitoes">Sutible \n for indoor</string>
+
+
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete_alaret">Delete Alart</string>
+    <string name="alaret_permission">Please enable Alaret Permission</string>
+    <string name="no_alert_weather_is_fine">no alert weather is_fine</string>
+    <string name="Dialog">Dialog</string>
+    <string name="Set_Alarm">Set Alarm</string>
+    <string name="Alarm_Name">Alarm Name</string>
+    <string name="Vibrate">Vibrate</string>
+    <string name="Alarm_Will_Ring">Alarm will ring in </string>
+    <string name="done">done</string>
+
+
+    <string name="Profile">Profile</string>
+    <string name="Location">Location</string>
+    <string name="Language">Language</string>
+
+    <string name="Notification">Notification</string>
+    <string name="ANotification">allow to sned weather Notification</string>
+
+    <string name="about">about</string>
+    <string name="Units">Units</string>
+    <string name="Tempreture">Tempreture</string>
+    <string name="WindSpeed">Wind Speed</string>
+
+    <string name="celsius">celsius</string>
+    <string name="kelvin">kelvin</string>
+    <string name="fahrenheit">fahrenheit</string>
+    <string-array name="Locations">
+        <item name = ""></item>
+        <item name="GPS">GPS</item>
+        <item name="Map">Map</item>
+    </string-array>
+
+    <string-array name="TempUnit">
+        <item name = ""></item>
+        <item name="Celsius">celsius</item>
+    <item name="Kelvin">kelvin</item>
+    <item name="Fahrenheit">fahrenheit</item>
+    </string-array>
+    <string name="c">C ْ°</string>
+    <string name="f">F ْ°</string>
+    <string name="k">K ْ°</string>
+
+    <string name="Arabic">Arabic</string>
+    <string name="English">English</string>
+    <string name="French">French</string>
+
+    <string-array name="Languages">
+        <item name = ""></item>
+        <item name="ar">ar</item>
+    <item name="en">en</item>
+    <item name="fr">fr</item>
+    </string-array>
+    <string name="tomTemp">Tommorrow\'s Tempreture</string>
+    <string name="maybe">probaly same as today </string>
+
+    <string name="senSet">Sunset</string>
+    <string name="sunRise">Sunrise</string>
+    <string name="Forecast">Forecast</string>
+    <string name="alram_name">"Alarm Name "</string>
+    <string name="température">Température</string>
+    <string name="ok">OK</string>
+    <string name="country">country</string>
+    <string name="desc">Describtion</string>
+    <string name="From">From</string>
+    <string name="To">To</string>
+
+</resources>

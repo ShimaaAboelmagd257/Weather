@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.weather.weatherMain.MainActivity">
+<!--
+    <item
+        android:id="@+id/fragmentHome"
+        android:orderInCategory="100"
+        android:title="@string/Home"
+        android:icon="@drawable/home"
+        />
+    <item
+        android:id="@+id/fragmentFav"
+        android:orderInCategory="100"
+        android:title="@string/Favourites"
+        android:icon="@drawable/favorite"
+
+        />
+-->
+    <item
+        android:id="@+id/fragmentAlerts"
+        android:orderInCategory="100"
+        android:title="@string/Alerts"
+        android:icon="@drawable/alarm"
+
+        />
+    <item
+        android:id="@+id/fragmentset"
+        android:orderInCategory="100"
+        android:title="@string/Settings"
+        android:icon="@drawable/settings"
+
+        />
+</menu>

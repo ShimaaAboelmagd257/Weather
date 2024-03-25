@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.example.weather.home.view.HomeFragment"
+        tools:layout="@layout/fragment_home">
+    <!--<argument
+        android:name="weather"
+        app:argType="com.example.weatherapp.model.pojo.WeatherData" />-->
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentFav"
+            app:destination="@id/fragmentFav" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentset"
+            app:destination="@id/fragmentset" />
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentAlerts"
+            app:destination="@id/fragmentAlerts" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/fragmentFav"
+        android:name="com.example.weather.favorites.view.FavoritesFragment"
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_fragmentFav_to_fragmentHome"
+            app:destination="@id/fragmentHome" >
+       <!-- <argument
+            android:name="weatherData"
+            app:argType="com.example.weathear.model.pojos.WeatherData" />-->
+        </action>
+        <action
+            android:id="@+id/action_fragmentFav_to_mapFragment"
+            app:destination="@id/mapFragment" >
+    </action>
+      <!--  <argument
+            android:name="weatherData"
+            app:argType="com.example.weathear.model.pojos.WeatherData" />-->
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/fragmentDialog"
+        android:name="com.example.weather.alerts.view.AlertsDialog"
+        tools:layout="@layout/fragment_alerts_dialog"
+
+        >
+        <action
+            android:id="@+id/action_fragmentDialog_to_fragmentAlerts"
+            app:destination="@id/fragmentAlerts" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentAlerts"
+        android:name="com.example.weather.alerts.view.AlertsFragment"
+        tools:layout="@layout/fragment_alerts"
+        >
+        <action
+            android:id="@+id/action_fragmentAlerts_to_fragmentDialog"
+            app:destination="@id/fragmentDialog" >
+        </action>
+        <action
+            android:id="@+id/action_fragmentAlerts_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/fragmentset"
+        android:name="com.example.weather.settings.view.SettingsFragment"
+        tools:layout="@layout/fragment_settings">
+
+        <action
+            android:id="@+id/action_fragmentSettings_to_mapFragment"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_fragmentset_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.weather.maps.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map"  >
+
+        <action
+            android:id="@+id/action_mapFragment_to_fragmentFav"
+            app:destination="@id/fragmentFav" />
+
+        <action
+            android:id="@+id/action_mapFragment_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+
+        <argument
+            android:name="isFav"
+            app:argType="boolean" />
+
+    </fragment>
+</navigation>

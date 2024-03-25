@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#94D6F4"
+    tools:context=".home.view.HomeFragment">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/cloudsBackground"
+        android:layout_width="427dp"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="288dp"
+        android:background="#00FFFFFF"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF"
+            android:fitsSystemWindows="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+            <TextView
+                android:id="@+id/headTemp"
+                android:layout_width="match_parent"
+                android:layout_height="226dp"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:textSize="40sp" />
+
+            <TextView
+                android:layout_width="202dp"
+                android:layout_height="55dp"
+                android:gravity="center"
+                android:text="@string/température"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_collapseMode="pin" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:layout_collapseMode="pin" />
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrolling"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/skyStatus"
+                android:layout_width="80dp"
+                android:layout_height="43dp"
+                android:layout_marginTop="188dp"
+                android:layout_marginEnd="108dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="301dp"
+                android:layout_height="120dp"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/skyStatus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.684" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/hourly_weather_rv"
+                android:layout_width="342dp"
+                android:layout_height="201dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="#00FFFFFF"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@id/todaytemp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.31"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/minMaxTemp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardtimming"
+                android:layout_width="345dp"
+                android:layout_height="228dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="8dp"
+                app:cardMaxElevation="8dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintBottom_toTopOf="@+id/lifeStyleTips"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.589"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/sun_rise_set" />
+
+                <TextView
+                    android:id="@+id/sunSet"
+                    android:layout_width="92dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:text="@string/senSet" />
+
+                <TextView
+                    android:id="@+id/setTime"
+                    android:layout_width="127dp"
+                    android:layout_height="43dp"
+                    android:layout_gravity="bottom|right"
+                    android:gravity="center"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/sunRise"
+                    android:layout_width="87dp"
+                    android:layout_height="46dp"
+                    android:gravity="center"
+                    android:text="@string/sunRise" />
+
+                <TextView
+                    android:id="@+id/riseTime"
+                    android:layout_width="104dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="right|top"
+                    android:gravity="center"
+                    android:text="TextView" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/weatherDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/Weather_Details"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.275"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/weekly_weather_rv" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/weekly_weather_rv"
+                android:layout_width="340dp"
+                android:layout_height="692dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="20dp"
+                android:background="#00FFFFFF"
+                android:visibility="visible"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="8dp"
+                app:cardMaxElevation="8dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintBottom_toTopOf="@id/weatherDetails"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hourly_weather_rv">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/todaytemp"
+                android:layout_width="348dp"
+                android:layout_height="119dp"
+                app:cardBackgroundColor="#00FFFFFF"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="8dp"
+                app:cardMaxElevation="8dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintBottom_toTopOf="@id/weekly_weather_rv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hourly_weather_rv">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_gravity="top"
+                    android:background="#00FFFFFF"
+                    android:gravity="center"
+                    android:text="@string/tomTemp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="325dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom"
+                    android:background="#00FFFFFF"
+                    android:gravity="center"
+                    android:text="TextView"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/lifeStyleTips"
+                android:layout_width="167dp"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="@string/Life_Style_Tips"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/lifeTipesGride"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.166"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/minMaxTemp"
+                android:layout_width="80dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="12dp"
+                app:layout_constraintStart_toEndOf="@+id/today"
+                app:layout_constraintTop_toBottomOf="@+id/skyStatus" />
+
+            <TextView
+                android:id="@+id/today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/minMaxTemp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/minMaxTemp"
+                app:layout_constraintVertical_bias="1.0"
+                tools:ignore="TextContrastCheck" />
+
+            <GridLayout
+                android:id="@+id/lifeTipesGride"
+                android:layout_width="340dp"
+                android:layout_height="680dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="#00FFFFFF"
+                android:columnCount="2"
+                android:rowCount="4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.363"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <!-- CardView for Wind -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/suitableIndoorsCard"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp"
+                    app:cardMaxElevation="8dp"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:id="@+id/indoors"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:padding="16dp"
+                        android:text="@string/Suitable"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/imageIndoors"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        app:srcCompat="@drawable/indoors" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView for Humidity -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/carCard"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp"
+                    app:cardMaxElevation="8dp"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:id="@+id/imageCar"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="left|center_vertical"
+                        app:srcCompat="@drawable/carwash" />
+
+                    <TextView
+                        android:id="@+id/carText"
+                        android:layout_width="73dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:text="@string/VerySuitable"
+                        android:textSize="16sp" />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView for Visibility -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/moisturisersCard"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp"
+                    app:cardMaxElevation="8dp"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:id="@+id/moisturisersImage"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        app:srcCompat="@drawable/moisturizer" />
+
+                    <TextView
+                        android:id="@+id/tv_moisturisers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="62dp"
+                        android:layout_gravity="center|right"
+                        android:text="@string/Moisturisers"
+                        android:textSize="16sp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView for UV Index -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/trafficCard"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp"
+                    app:cardMaxElevation="8dp"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:id="@+id/iv_traffic"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        app:srcCompat="@drawable/traffic" />
+
+                    <TextView
+                        android:id="@+id/tv_traffic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:text="@string/Traffic"
+                        android:textSize="16sp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView for Weather Description and Temperature -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mosquitoesCard"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_row="3"
+                    android:layout_column="1"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp"
+                    app:cardMaxElevation="8dp"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:id="@+id/iv_mosquitoes"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        app:srcCompat="@drawable/mosquito" />
+
+                    <TextView
+                        android:id="@+id/tv_mosquitoes"
+                        android:layout_width="87dp"
+                        android:layout_height="52dp"
+                        android:layout_gravity="center|right"
+                        android:text="@string/Mosquitoes"
+                        android:textSize="16sp" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView for Pressure -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pollenCard"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp"
+                    app:cardMaxElevation="8dp"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:id="@+id/imageViewpollen"
+                        android:layout_width="55dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center_vertical"
+                        app:srcCompat="@drawable/pollen" />
+
+                    <TextView
+                        android:id="@+id/tv_pollen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:text="@string/Pollen"
+                        android:textSize="16sp" />
+
+                </androidx.cardview.widget.CardView>
+                <!-- CardView for Pressure -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/tripCard"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp"
+                    app:cardMaxElevation="8dp"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:id="@+id/imageViewtrip"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        app:srcCompat="@drawable/roadtrip" />
+
+                    <TextView
+                        android:id="@+id/tv_trip"
+                        android:layout_width="87dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:text="@string/Trip"
+                        android:textSize="16sp" />
+
+                </androidx.cardview.widget.CardView>    <!-- CardView for Pressure -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/uvvCard"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp"
+                    app:cardMaxElevation="8dp"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:id="@+id/imageViewuvv"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_vertical"
+                        app:srcCompat="@drawable/uvindexxx" />
+
+                    <TextView
+                        android:id="@+id/tv_uvv"
+                        android:layout_width="85dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:text="@string/Modrate"
+                        android:textSize="16sp" />
+
+                </androidx.cardview.widget.CardView>
+            </GridLayout>
+
+            <GridLayout
+                android:id="@+id/WeatherDetails"
+                android:layout_width="340dp"
+                android:layout_height="510dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="15dp"
+                android:background="#00FFFFFF"
+                android:columnCount="2"
+                android:rowCount="3"
+                app:layout_constraintBottom_toTopOf="@id/cardtimming"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.416"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/weatherDetails"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <!-- CardView for Wind -->
+
+                <!-- CardView for Humidity -->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/windCard"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:background="#00FFFFFF"
+                    app:cardBackgroundColor="#00FFFFFF"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp"
+                    app:cardMaxElevation="8dp"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:id="@+id/tv_wind_desc"
+                        android:layout_width="146dp"
+                        android:layout_height="39dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/NNW_wind"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imageViewWind"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center|top"
+                        app:srcCompat="@drawable/windicon" />
+
+                    <TextView
+                        android:id="@+id/tv_wind_deg"
+                        android:layout_width="84dp"
+                        android:layout_height="53dp"
+                        android:layout_gravity="bottom|center"
+                        android:gravity="center"
+                        android:textSize="24sp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/humidityCard"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp"
+                    app:cardMaxElevation="8dp"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:id="@+id/tv_humidity_desc"
+                        android:layout_width="146dp"
+                        android:layout_height="53dp"
+
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/Humidity"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imageViewHumidity"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center|top"
+                        app:srcCompat="@drawable/humidityicon" />
+
+                    <TextView
+                        android:id="@+id/tv_humidity_deg"
+                        android:layout_width="120dp"
+                        android:layout_height="59dp"
+                        android:layout_gravity="bottom|center"
+                        android:gravity="center"
+                        android:textSize="24sp" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView for Visibility -->
+
+                <!-- CardView for UV Index -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/visibiltyCard"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp"
+                    app:cardMaxElevation="8dp"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:id="@+id/iv_visibility"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center|top"
+                        app:srcCompat="@drawable/visibilityicon" />
+
+                    <TextView
+                        android:id="@+id/tv_visibility_desc"
+                        android:layout_width="145dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/Visibility"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_visibility_deg"
+                        android:layout_width="108dp"
+                        android:layout_height="51dp"
+                        android:layout_row="2"
+                        android:layout_column="0"
+                        android:layout_gravity="bottom|center"
+                        android:gravity="center"
+                        android:textSize="24sp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/uvCard"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp"
+
+                    app:cardMaxElevation="8dp"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:id="@+id/tv_uv_desc"
+                        android:layout_width="145dp"
+                        android:layout_height="54dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+
+                        android:text="@string/Uv"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/iv_uv"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center|top"
+                        app:srcCompat="@drawable/uvicon" />
+
+                    <TextView
+                        android:id="@+id/tv_uv_deg"
+                        android:layout_width="104dp"
+                        android:layout_height="61dp"
+                        android:layout_gravity="bottom|center"
+                        android:gravity="center"
+                        android:textSize="24sp" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView for Weather Description and Temperature -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/FeelsLikeCard"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    app:cardBackgroundColor="#00FFFFFF"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp"
+                    app:cardMaxElevation="8dp"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:id="@+id/iv_weather"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center|top"
+                        app:srcCompat="@drawable/tempicon" />
+
+                    <TextView
+                        android:id="@+id/tv_weather_desc"
+                        android:layout_width="126dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/Feels_Like"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_temp"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center"
+                        android:gravity="center"
+                        android:textSize="24sp" />
+                </androidx.cardview.widget.CardView>
+
+                <!-- CardView for Pressure -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pressureCard"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp"
+                    app:cardMaxElevation="8dp"
+                    app:cardUseCompatPadding="true"
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/imageViewPressure"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center|top"
+                        app:srcCompat="@drawable/pressureicon" />
+
+                    <TextView
+                        android:id="@+id/tv_pressure_desc"
+                        android:layout_width="148dp"
+                        android:layout_height="46dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/Air_Pressure"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_pressure_deg"
+                        android:layout_width="113dp"
+                        android:layout_height="61dp"
+                        android:layout_gravity="bottom|center"
+                        android:gravity="center"
+                        android:textSize="24sp" />
+                </androidx.cardview.widget.CardView>
+
+
+            </GridLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/menuButton"
+        android:layout_width="64dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        app:layout_anchor="@id/appBar"
+        app:layout_anchorGravity="right"
+        app:srcCompat="@drawable/menu"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <ImageView
+        android:id="@+id/saveBtn"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="10dp"
+
+        android:src="@drawable/save" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

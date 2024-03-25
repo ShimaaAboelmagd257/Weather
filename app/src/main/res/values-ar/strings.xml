@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Weathear</string>
+    <string name="next">التالى</string>
+    <string name="Settings">الاعدادات</string>
+    <string name="Favourites">المفضله</string>
+    <string name="Home">الرئيسيه</string>
+    <string name="Alerts">التنبيهات</string>
+
+
+    <string name="Weather_Details">تفاصيل الجو </string>
+    <string name="Life_Style_Tips">نصائح يوميي</string>
+    <string name="Feels_Like">حوالى</string>
+    <string name="NNW_wind">رياح الشمال  الغربى</string>
+    <string name="Humidity">الرطوبه</string>
+    <string name="Uv">الاشعة تحت الحمراء</string>
+    <string name="Visibility">الرؤيه</string>
+    <string name="Air_Pressure"> ضغط الهواء</string>
+
+
+    <string name="hourly">%1$d %2$s</string>
+    <string name="max.min.unit">%1$d / %2$d %3$s</string>
+    <string name="previous">السابق</string>
+    <string name="hpa"> بسكال</string>
+    <string name="m_s">م/ث</string>
+    <string name="km_h">كم/س</string>
+    <string name="m_h">ميل/س</string>
+
+    <string-array name="WindUnit">
+        <item name = ""></item>
+        <item name="metric">metric</item>
+        <item name="standard">standard</item>
+        <item name="imperial">imperial</item>
+    </string-array>
+
+    <string name="temp_deg">%1$d %2$s</string>
+    <string name="pressure_deg">%1$.2f %2$s</string>
+    <string name="wind_deg">%1$d %2$s</string>
+    <string name="humidity_deg">%1$d %2$s</string>
+    <string name="cloud_deg">%1$d %2$s</string>
+    <string name="uv_deg">%1$d %2$s</string>
+    <string name="visibility_deg">%1$d %2$s</string>
+
+
+    <string name="Suitable">مناسب للخروج </string>
+    <string name="VerySuitable">مناسب جدا لسيارة</string>
+    <string name="Moisturisers">استخدم مرطبات أكثر</string>
+    <string name="Modrate">درجه الاشعة فوف البنفسجيه المتوسطه</string>
+    <string name="Trip">مناسب جدا للذهاب الى نزهه</string>
+    <string name="Pollen">انخفاض عدد حبوب اللقاح</string>
+    <string name="Traffic">حركة مرور جيدة </string>
+    <string name="Mosquitoes">بعض البعوض</string>
+
+
+    <string name="yes">حسنا</string>
+    <string name="cancel">تخطى</string>
+    <string name="delete_alaret">حذف المنبه</string>
+    <string name="alaret_permission">الرجاء تمكين إذن التنبيه</string>
+    <string name="no_alert_weather_is_fine">no alert weather is_fine</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="Dialog">Dialog</string>
+    <string name="Set_Alarm">ضبط المنبه</string>
+    <string name="Alarm_Name">اسم المنبه</string>
+    <string name="Vibrate">اهتزاز</string>
+    <string name="Alarm_Will_Ring">سوف يرن المنبه خلال </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="done">حفظ</string>
+
+
+    <string name="Profile">إعدادات</string>
+    <string name="Location">الموقع</string>
+
+    <string name="Notification">الاشعارات</string>
+    <string name="ANotification">السماح بإرسال إشعار الطقس</string>
+
+    <string name="about">about</string>
+    <string name="Units">الوحدات</string>
+    <string name="Tempreture">درجه الحرارة</string>
+    <string name="WindSpeed">سرعه الرياح</string>
+
+    <string-array name="Locations">
+        <item name = ""></item>
+        <item name="GPS">GPS</item>
+        <item name="Map">Map</item>
+    </string-array>
+
+    <string-array name="TempUnit">
+        <item name = ""></item>
+        <item name="Celsius">celsius</item>
+        <item name="Kelvin">kelvin</item>
+        <item name="Fahrenheit">fahrenheit</item>
+    </string-array>
+
+
+    <string name="celsius">درجة مئوية</string>
+    <string name="kelvin">كلفن</string>
+    <string name="fahrenheit">فهرنهايت</string>
+
+    <string name="c">C ْ°</string>
+    <string name="f">F ْ°</string>
+    <string name="k">K ْ°</string>
+    <string name="Language">اللغه</string>
+
+    <string name="Arabic">العربيه</string>
+    <string name="English">الانجليزيه</string>
+    <string name="French">الفرنسيه</string>
+
+    <string-array name="Languages">
+        <item name = ""></item>
+        <item name="ar">ar</item>
+        <item name="en">en</item>
+        <item name="fr">fr</item>
+    </string-array>
+
+
+
+    <string name="tomTemp">درجه الحرارة غدا</string>
+    <string name="maybe">ربما نفس اليوم</string>
+    <string name="senSet">الغروب</string>
+    <string name="sunRise">الشروق</string>
+
+    <string name="Forecast">Forecast</string>
+    <string name="alram_name">"Alarm Name "</string>
+    <string name="température">Température</string>
+
+
+</resources>

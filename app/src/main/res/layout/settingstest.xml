@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragmentset"
+
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!-- Add data variables if needed -->
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- Header 1: Location -->
+
+        <!-- Spinner 1 for Location -->
+
+        <TextView
+            android:id="@+id/headerLocation"
+            style="@style/HeaderTextStyle"
+            android:layout_width="148dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="300dp"
+            android:text="Location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinnerLocation"
+            style="@style/SpinnerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/Location"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerLocation" />
+
+        <!-- Header 2: Temperature Unit -->
+        <TextView
+            android:id="@+id/headerTempUnit"
+            style="@style/HeaderTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperature Unit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerLocation" />
+
+        <!-- Spinner 2 for Temperature Unit -->
+        <Spinner
+            android:id="@+id/spinnerTempUnit"
+            style="@style/SpinnerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/Tempreture"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerTempUnit" />
+
+        <!-- Header 3: Wind Speed Unit -->
+        <TextView
+            android:id="@+id/headerSpeedUnit"
+            style="@style/HeaderTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wind Speed Unit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerTempUnit" />
+
+        <!-- Spinner 3 for Wind Speed Unit -->
+        <Spinner
+            android:id="@+id/spinnerSpeedUnit"
+            style="@style/SpinnerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/WindSpeed"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerSpeedUnit" />
+
+        <!-- Header 4: Languages -->
+        <TextView
+            android:id="@+id/headerLanguages"
+            style="@style/HeaderTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Languages"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerSpeedUnit" />
+
+        <!-- Spinner 4 for Languages -->
+        <Spinner
+            android:id="@+id/spinnerLanguages"
+            style="@style/SpinnerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/Language"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerLanguages" />
+
+        <!-- Header 5: About -->
+        <TextView
+            android:id="@+id/headerAbout"
+            style="@style/HeaderTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerLanguages" />
+
+        <!-- Spinner 5 for About -->
+        <Spinner
+            android:id="@+id/spinnerAbout"
+            style="@style/SpinnerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/about"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerAbout" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/settingToolbar"
+            android:layout_width="375dp"
+            android:layout_height="58dp"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="173dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="164dp"
+            android:gravity="center"
+            android:text="@string/Settings"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/settingToolbar" />
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="73dp"
+            android:layout_height="56dp"
+            app:layout_constraintStart_toStartOf="@+id/settingToolbar"
+            app:layout_constraintTop_toTopOf="@+id/settingToolbar"
+            app:srcCompat="@drawable/arrow_back" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+    <!--  app:onItemSelected="@{(parent, view, position, id) ->
+                viewModel.updateLocationSetting(parent.adapter.getItem(position).toString())}"-->
+<!--                app:location="@{viewModel.selectedLocationSetting}"
+                app:onItemSelected="@{viewModel.onItemSelectedListener}" />
+-->

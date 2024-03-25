@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Weathear</string>
+    <string name="next">Suivant</string>
+    <string name="Settings">Paramètres</string>
+    <string name="Favourites">Favoris</string>
+    <string name="Home">Accueil</string>
+    <string name="Alerts">Alertes</string>
+
+    <string name="Weather_Details">Détails météorologiques</string>
+    <string name="Life_Style_Tips">Conseils de mode de vie</string>
+    <string name="Feels_Like">Ressenti</string>
+    <string name="NNW_wind">Vent NNO</string>
+    <string name="Humidity">Humidité</string>
+    <string name="Uv">UV</string>
+    <string name="Visibility">Visibilité</string>
+    <string name="Air_Pressure">Pression atmosphérique</string>
+
+
+    <string name="hourly">%1$d %2$s</string>
+    <string name="max.min.unit">%1$d / %2$d %3$s</string>
+    <string name="previous">Précédent</string>
+    <string name="hpa"> hPa</string>
+    <string name="m_s">m/s</string>
+    <string name="km_h">Km/h</string>
+    <string name="m_h">mile/h</string>
+    <string-array name="WindUnit">
+        <item name = ""></item>
+        <item name="metric">metric</item>
+        <item name="standard">standard</item>
+        <item name="imperial">imperial</item>
+    </string-array>
+    <string name="temp_deg">%1$d %2$s</string>
+    <string name="pressure_deg">%1$.2f %2$s</string>
+    <string name="wind_deg">%1$d %2$s</string>
+    <string name="humidity_deg">%1$d %2$s</string>
+    <string name="cloud_deg">%1$d %2$s</string>
+    <string name="uv_deg">%1$d %2$s</string>
+    <string name="visibility_deg">%1$d %2$s</string>
+
+    <string name="Suitable">Adéquat \n pour l\'intérieur</string>
+    <string name="VerySuitable">Très adapté \n pour le lavage de voiture</string>
+    <string name="Moisturisers">Utiliser plus \n d\'hydratants</string>
+    <string name="Modrate">Indice UV \n modéré</string>
+    <string name="Trip">Très adapté \n pour un voyage</string>
+    <string name="Pollen">Faible taux de pollen</string>
+    <string name="Traffic">Bonne condition de \n circulation</string>
+    <string name="Mosquitoes">Adéquat \n pour l\'intérieur</string>
+
+    <string name="yes">Oui</string>
+    <string name="cancel">Annuler</string>
+    <string name="delete_alaret">Supprimer l\'alerte</string>
+    <string name="alaret_permission">Veuillez activer l\'autorisation d\'alerte</string>
+    <string name="no_alert_weather_is_fine">Pas d\'alerte, le temps est bon</string>
+    <string name="Dialog">Dialogue</string>
+    <string name="Set_Alarm">Régler l\'alarme</string>
+    <string name="Alarm_Name">Nom de l\'alarme</string>
+    <string name="Vibrate">Vibrer</string>
+    <string name="Alarm_Will_Ring">L\'alarme sonnera dans </string>
+    <string name="done">Terminé</string>
+
+    <string name="Profile">Profil</string>
+    <string name="Location">Emplacement</string>
+    <string-array name="Locations">
+        <item name = ""></item>
+        <item name="GPS">GPS</item>
+    <item name="Map">Map</item>
+    </string-array>
+    <string name="Notification">Notification</string>
+    <string name="ANotification">Autoriser l\'envoi de notifications météo</string>
+
+    <string name="about">À propos</string>
+    <string name="Units">Unités</string>
+    <string name="Tempreture">Température</string>
+    <string name="WindSpeed">Vitesse du vent</string>
+
+    <string name="celsius">celsius</string>
+    <string name="kelvin">kelvin</string>
+    <string name="fahrenheit">fahrenheit</string>
+
+    <string-array name="TempUnit">
+        <item name = ""></item>
+        <item name="Celsius">celsius</item>
+        <item name="Kelvin">kelvin</item>
+        <item name="Fahrenheit">fahrenheit</item>
+    </string-array>
+
+
+
+    <string name="c">C ْ°</string>
+    <string name="f">F ْ°</string>
+    <string name="k">K ْ°</string>
+
+    <string name="Arabic">Arabe</string>
+    <string name="English">Anglais</string>
+    <string name="French">Français</string>
+
+    <string-array name="Languages">
+        <item name = ""></item>
+        <item name="ar">ar</item>
+        <item name="en">en</item>
+        <item name="fr">fr</item>
+    </string-array>
+    <string name="Language">langue</string>
+
+    <string name="tomTemp">Température de demain</string>
+    <string name="maybe">probablement le même qu\'aujourd\'hui</string>
+    <string name="senSet">Coucher de soleil</string>
+    <string name="sunRise">Lever du soleil</string>
+
+    <string name="Forecast">Forecast</string>
+    <string name="alram_name">"Alarm Name "</string>
+    <string name="température">Température</string>
+
+
+</resources>

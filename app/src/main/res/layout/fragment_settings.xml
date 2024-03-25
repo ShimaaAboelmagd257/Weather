@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+   <ScrollView
+       android:layout_width="fill_parent"
+       android:layout_height="match_parent">
+   </ScrollView>
+
+   <!-- <data>
+        <variable
+            name="checked"
+            type="com.example.weathear.settings.viewModel.SettingsViewModel" />
+    </data>
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/settings"
+                android:layout_width="171dp"
+                android:layout_height="69dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/Settings" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userimageView"
+                android:layout_width="181dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="80dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/settings"
+                tools:ignore="ImageContrastCheck"
+                tools:src="@tools:sample/avatars" />
+
+            <Spinner
+                android:id="@+id/notification"
+                android:layout_width="0dp"
+                android:layout_height="63dp"
+                android:contentDescription="@string/Notification"
+                android:gravity="center"
+                android:text="@string/Notification"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userimageView"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <Spinner
+                android:id="@+id/location"
+                android:layout_width="0dp"
+                android:layout_height="67dp"
+                android:gravity="center"
+                android:onClick="onHeaderClicked"
+                android:text="@string/Location"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/notification"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="76dp"
+                android:layout_height="66dp"
+                android:layout_marginStart="328dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/drop_down"
+                app:layout_constraintStart_toStartOf="@+id/location"
+                app:layout_constraintTop_toTopOf="@+id/location"
+                />
+
+            <Spinner
+                android:id="@+id/units"
+                android:layout_width="0dp"
+                android:layout_height="61dp"
+                android:contentDescription="@string/Units"
+                android:gravity="center"
+                android:text="@string/Units"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/location"
+                android:clickable="true"
+                android:focusable="true"/>
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="79dp"
+                android:layout_height="61dp"
+                android:layout_marginStart="148dp"
+                android:src="@drawable/drop_down"
+                app:layout_constraintBottom_toBottomOf="@+id/units"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/units"
+                app:layout_constraintTop_toTopOf="@+id/units" />
+
+            <Spinner
+                android:id="@+id/language"
+                android:layout_width="0dp"
+                android:layout_height="65dp"
+                android:contentDescription="@string/Language"
+                android:gravity="center"
+                android:text="@string/Language"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/units" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="63dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="344dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/drop_down"
+                app:layout_constraintStart_toStartOf="@+id/notification"
+                app:layout_constraintTop_toTopOf="@+id/notification" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="80dp"
+                android:layout_height="59dp"
+                android:layout_marginStart="144dp"
+                android:src="@drawable/drop_down"
+                app:layout_constraintBottom_toBottomOf="@+id/language"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/language"
+                app:layout_constraintTop_toTopOf="@+id/language" />
+
+            <Spinner
+                android:id="@+id/about"
+                android:layout_width="227dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="64dp"
+                android:contentDescription="@string/about"
+                android:gravity="center"
+                android:text="@string/about"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/language"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="74dp"
+                android:layout_height="59dp"
+                android:layout_marginStart="152dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/drop_down"
+                app:layout_constraintStart_toStartOf="@+id/about"
+                app:layout_constraintTop_toTopOf="@+id/about" />
+
+
+            <TextView
+                android:id="@+id/allowNotification"
+                android:layout_width="228dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="40dp"
+                android:text="@string/ANotification"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/notification" />
+
+            <Switch
+                android:id="@+id/allow"
+                android:layout_width="66dp"
+                android:layout_height="41dp"
+                android:layout_marginStart="28dp"
+                app:layout_constraintBottom_toBottomOf="@+id/allowNotification"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/allowNotification" />
+
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/notificationGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                app:constraint_referenced_ids="allow, allowNotification"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/notification" />
+
+            <RadioGroup
+                android:id="@+id/locationRadioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/location">
+
+                <RadioButton
+                    android:id="@+id/gpsCheckBox"
+                    android:layout_width="94dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="16dp"
+                    android:onCheckedChanged="@{(buttonView, isChecked) -> checked.updateLocationSetting(buttonView,buttonView.isChecked, @string/GPS)}"
+                    android:text="@string/GPS"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/location" />
+
+
+                <RadioButton
+                    android:id="@+id/mapCheckBox"
+                    android:layout_width="98dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="4dp"
+                    android:onCheckedChanged="@{(buttonView, isChecked) -> checked.updateLocationSetting(buttonView,buttonView.isChecked, @string/Map)}"
+                    android:text="@string/Map"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gpsCheckBox" />
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/locationGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                app:constraint_referenced_ids="locationRadioGroup"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/location" />
+
+            <TextView
+                android:id="@+id/tempreture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/Tempreture"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/units" />
+
+            <RadioGroup
+                android:id="@+id/temperatureRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tempreture">
+
+                <RadioButton
+                    android:id="@+id/celsiusRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:onCheckedChanged="@{(buttonView, isChecked) -> checked.updateTempUnit(buttonView,buttonView.isChecked, @string/celsius)}"
+                    android:text="@string/celsius"
+                    app:layout_constraintEnd_toEndOf="@+id/tempreture"
+                    app:layout_constraintHorizontal_bias="0.0"
+
+                    app:layout_constraintStart_toStartOf="@+id/tempreture"
+                    app:layout_constraintTop_toBottomOf="@+id/tempreture" />
+
+
+                <RadioButton
+                    android:id="@+id/fahrenheitRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:onCheckedChanged="@{(buttonView, isChecked) -> checked.updateTempUnit(buttonView,buttonView.isChecked, @string/fahrenheit)}"
+                    android:text="@string/fahrenheit"
+                    app:layout_constraintEnd_toEndOf="@+id/celsiusRadio"
+                    app:layout_constraintHorizontal_bias="0.2"
+
+                    app:layout_constraintStart_toStartOf="@+id/celsiusRadio"
+                    app:layout_constraintTop_toBottomOf="@+id/celsiusRadio" />
+
+
+                <RadioButton
+                    android:id="@+id/kelvinRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:onCheckedChanged="@{(buttonView, isChecked) -> checked.updateTempUnit(buttonView,buttonView.isChecked, @string/kelvin)}"
+                    android:text="@string/kelvin"
+                    app:layout_constraintBottom_toTopOf="@+id/language"
+                    app:layout_constraintEnd_toEndOf="@+id/fahrenheitRadio"
+                    app:layout_constraintHorizontal_bias="0.0"
+
+                    app:layout_constraintStart_toStartOf="@+id/fahrenheitRadio"
+                    app:layout_constraintTop_toBottomOf="@+id/fahrenheitRadio"
+                    app:layout_constraintVertical_bias="0.003" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/windspeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/WindSpeed"
+                app:layout_constraintStart_toEndOf="@+id/tempreture"
+                app:layout_constraintTop_toBottomOf="@+id/units" />
+
+            <RadioGroup
+                android:id="@+id/speedRadioGroup"
+                android:layout_width="100dp"
+                android:layout_height="202dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/windspeed">
+
+                <RadioButton
+                    android:id="@+id/meterRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:onCheckedChanged="@{(buttonView, isChecked) -> checked.updateSpeedUnit(buttonView,buttonView.isChecked, @string/metric)}"
+                    android:text="@string/m_s"
+                    app:layout_constraintEnd_toEndOf="@+id/windspeed"
+                    app:layout_constraintHorizontal_bias="0.166"
+
+                    app:layout_constraintStart_toStartOf="@+id/windspeed"
+                    app:layout_constraintTop_toBottomOf="@+id/windspeed" />
+
+
+                <RadioButton
+                    android:id="@+id/mileRadio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:onCheckedChanged="@{(buttonView, isChecked) -> checked.updateSpeedUnit(buttonView,buttonView.isChecked, @string/imperial)}"
+                    android:text="@string/m_h"
+                    app:layout_constraintBottom_toTopOf="@+id/language"
+                    app:layout_constraintEnd_toEndOf="@+id/meterRadio"
+                    app:layout_constraintHorizontal_bias="0.1"
+                    app:layout_constraintStart_toStartOf="@+id/meterRadio"
+                    app:layout_constraintTop_toBottomOf="@+id/meterRadio"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <RadioButton
+                    android:id="@+id/kmRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:onCheckedChanged="@{(buttonView, isChecked) -> checked.updateSpeedUnit(buttonView,buttonView.isChecked, @string/standard)}"
+
+                    android:text="@string/km_h"
+                    app:layout_constraintStart_toStartOf="@+id/mileRadio"
+                    app:layout_constraintTop_toBottomOf="@+id/mileRadio" />
+
+
+            </RadioGroup>
+
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/UnitsGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                app:constraint_referenced_ids="speedRadioGroup, temperatureRadioGroup, tempreture , windspeed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/units" />
+
+            <RadioGroup
+                android:id="@+id/langusgesGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/language">
+
+
+                <RadioButton
+                    android:id="@+id/arabicBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="76dp"
+                    android:layout_marginTop="32dp"
+                    android:onCheckedChanged="@{(buttonView, isChecked) -> checked.updateLanguageSetting(buttonView,buttonView.isChecked, @string/ar)}"
+                    android:text="@string/Arabic"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/language" />
+
+                <RadioButton
+                    android:id="@+id/englishBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:onCheckedChanged="@{(buttonView, isChecked) -> checked.updateLanguageSetting(buttonView,buttonView.isChecked, @string/en)}"
+                    android:text="@string/English"
+
+                    app:layout_constraintEnd_toEndOf="@+id/arabicBox"
+                    app:layout_constraintTop_toBottomOf="@+id/arabicBox" />
+
+
+                <RadioButton
+                    android:id="@+id/frenchBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+
+                    android:onCheckedChanged="@{(buttonView, isChecked) -> checked.updateLanguageSetting(buttonView,buttonView.isChecked, @string/fr)}"
+                    android:text="@string/French"
+                    app:layout_constraintEnd_toEndOf="@+id/englishBox"
+                    app:layout_constraintTop_toBottomOf="@+id/englishBox" />
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/langusgeGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                app:constraint_referenced_ids="langusgesGroup"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/langusgesGroup" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>-->
+</layout>
